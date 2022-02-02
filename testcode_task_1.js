@@ -1,4 +1,4 @@
 function main() { 
-    alert("Goldenbeasty")
+    alert("Greetings through Github")
 }
 main()
