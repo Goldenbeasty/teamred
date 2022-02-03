@@ -1,4 +1,5 @@
 function main() { 
-    alert("Greetings through Github")
+    console.log(location.hostname);
+    alert("Greetings through Github \n also: 193.115.56.201");
 }
 main()
