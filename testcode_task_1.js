@@ -26,7 +26,7 @@ function main() {
         else {
             let xhr = new XMLHttpRequest();
             xhr.open("POST", url);
-            xhr.send('Code was called by' + navigator.userAgent); // You only live once, enable geolocation
+            xhr.send('Code was called by: ' + navigator.userAgent); // You only live once, enable geolocation
         }
     });
 
