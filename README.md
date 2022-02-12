@@ -3,3 +3,5 @@
 This repo might contain malicious code, be aware
 
 We do thing not because we must, but because we can... I think
+
+Taking it down soon :) also testing gpg keys
